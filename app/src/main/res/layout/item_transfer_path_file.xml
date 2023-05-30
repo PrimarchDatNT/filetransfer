@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/cl_background"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tool:ignore="MissingDefaultResource">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_icon_path"
+        android:layout_width="@dimen/px8"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_transfer_nav_right" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_path_item"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/px8"
+        android:layout_marginEnd="@dimen/px8"
+        android:background="?attr/selectableItemBackground"
+        android:ellipsize="middle"
+        android:gravity="center"
+        android:maxWidth="@dimen/px200"
+        android:paddingTop="@dimen/px6"
+        android:paddingBottom="@dimen/px8"
+        android:singleLine="true"
+        android:textColor="@color/label_sec"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_icon_path"
+        app:layout_constraintTop_toTopOf="parent"
+        tool:text="Android" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/brand</item>
+        <item name="colorPrimaryDark">@color/brand_500</item>
+        <item name="colorAccent">@color/brand</item>
+        <item name="colorControlNormal">@color/brand_400</item>
+        <item name="colorControlActivated">@color/brand</item>
+        <item name="colorSwitchThumbNormal">@color/sys_gray_2</item>
+        <item name="android:colorForeground">@color/sys_gray_3</item>
+        <item name="android:actionMenuTextColor">@color/label_prim</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="BottomDialog" parent="@style/BaseBottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BackgroundTransparent</item>
+    </style>
+
+    <style name="BackgroundTransparent" parent="@style/BaseBottomSheetDialog">
+        <item name="android:background">@drawable/bg_transparrent</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <!--        <item name="android:windowIsFloating">false</item>-->
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+        <!--        <item name="android:windowActionBar">false</item>-->
+        <!--        <item name="windowNoTitle">true</item>-->
+    </style>
+
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottom_dialog</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog" />
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_dialog_bg_radius_top</item>
+    </style>
+
+
+</resources>

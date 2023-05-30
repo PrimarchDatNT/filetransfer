@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/px16">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_general_dialog"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/px16"
+            android:paddingBottom="@dimen/px16"
+            android:text="@string/title_permission"
+            android:textColor="@color/label_prim"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/sys_sec" />
+
+        <RelativeLayout
+            android:id="@+id/ll_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/px160">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/px20"
+                android:layout_marginTop="@dimen/px20"
+                android:layout_marginEnd="@dimen/px20"
+                android:layout_marginBottom="@dimen/px20"
+                android:gravity="center"
+                android:textColor="@color/label_prim"
+                tools:text="Just one more step to finish your work, do you want to continue?" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px84"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/px20"
+                android:background="@drawable/background_item_config"
+                android:ems="10"
+                android:imeOptions="actionDone"
+                android:inputType="textUri"
+                android:paddingStart="@dimen/px20"
+                android:paddingEnd="@dimen/px20"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textColor="@color/label_prim"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/sys_sec" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px60"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_message">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_negative_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?selectableItemBackground"
+                android:gravity="center"
+                android:text="@string/btn_cancel"
+                android:textAllCaps="true"
+                android:textColor="@color/label_sec" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/sys_sec" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_positive_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?selectableItemBackground"
+                android:gravity="center"
+                android:onClick="btnok_clicked"
+                android:text="@string/btn_ok"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

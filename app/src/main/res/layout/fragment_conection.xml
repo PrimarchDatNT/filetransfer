@@ -1,0 +1,219 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sys_quarternary"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_step_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/cl_step_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tv_num_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px16"
+            android:layout_marginTop="@dimen/px24"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_step_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_step_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px12"
+            android:layout_marginEnd="@dimen/px16"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_num_1"
+            app:layout_constraintTop_toTopOf="@+id/tv_num_1">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_step1_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/label_prim" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_step1_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px4"
+                android:textColor="@color/label_sec" />
+
+            <RelativeLayout
+                android:id="@+id/rl_hotspot_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px36"
+                android:layout_marginTop="@dimen/px8"
+                android:background="@drawable/selector_button_background_radius">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_wifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/px10"
+                    android:adjustViewBounds="true"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_wifi" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_hotspot_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/px10"
+                    android:layout_marginTop="@dimen/px10"
+                    android:layout_toEndOf="@+id/iv_wifi"
+                    android:textColor="@color/label_prim" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_hotspot_share_pw"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px36"
+                android:layout_marginTop="@dimen/px8"
+                android:background="@drawable/selector_button_background_radius">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_share_pw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/px10"
+                    android:adjustViewBounds="true"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_share_pw" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_hotspot_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/px10"
+                    android:layout_marginTop="@dimen/px10"
+                    android:layout_toEndOf="@+id/iv_share_pw"
+                    android:textColor="@color/label_prim" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_step_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_step_1">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tv_num_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px16"
+            android:layout_marginTop="@dimen/px24"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_step_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_step_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px12"
+            android:layout_marginEnd="@dimen/px16"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_num_2"
+            app:layout_constraintTop_toTopOf="@+id/tv_num_2">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_step2_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/step2_title"
+                android:textColor="@color/label_prim" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_step2_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px4"
+                android:text="@string/step2_hotspot_msg"
+                android:textColor="@color/label_sec" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_server_address"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px36"
+                android:layout_marginTop="@dimen/px8"
+                android:background="@drawable/selector_button_background_radius"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/px10"
+                android:paddingEnd="@dimen/px10"
+                android:textColor="@color/label_prim" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_qr_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_qr_code"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_step_2">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_server_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="1:1" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/px40"
+            android:layout_height="@dimen/px40"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_qr_logo"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_wait_network"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px20"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_step_2"
+        app:layout_constraintVertical_bias="0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

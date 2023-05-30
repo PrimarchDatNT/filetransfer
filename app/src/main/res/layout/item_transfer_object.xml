@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_view_group"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:background="@color/sys_quarternary">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_item_file"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackground"
+        android:paddingTop="@dimen/px8"
+        android:paddingBottom="@dimen/px12">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/icon_container"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="@dimen/px20"
+            android:elevation="0dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardCornerRadius="@dimen/px4"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_thumb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_file_doc" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/px12"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@color/label_prim"
+            app:layout_constraintBottom_toTopOf="@id/tv_file_info"
+            app:layout_constraintEnd_toStartOf="@+id/iv_select_stage"
+            app:layout_constraintStart_toEndOf="@+id/icon_container"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Người tính chẳng bằng trời tính.pdf" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_file_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/label_sec"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/tv_title"
+            app:layout_constraintRight_toRightOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            tools:text="202.22KB" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_select_stage"
+            android:layout_width="@dimen/px40"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/px10"
+            android:adjustViewBounds="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/px8"
+            android:src="@drawable/ic_transfer_download"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_title"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_upload"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_gravity="bottom"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/pb_download"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_gravity="bottom"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="0" />
+</FrameLayout>

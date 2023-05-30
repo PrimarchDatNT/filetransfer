@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/px24"
+        android:layout_marginEnd="@dimen/px24"
+        android:background="@drawable/bg_general_dialog"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_dialog_cancel_compress_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:padding="@dimen/px16"
+            android:text="@string/rename_title"
+            android:textColor="@color/label_prim" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider" />
+
+        <RelativeLayout
+            android:id="@+id/ll_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/px160">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/ed_file_rename"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px76"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/px16"
+                android:layout_marginTop="@dimen/px16"
+                android:layout_marginEnd="@dimen/px16"
+                android:layout_marginBottom="@dimen/px16"
+                android:background="@drawable/background_item_config"
+                android:ems="10"
+                android:imeOptions="actionDone"
+                android:inputType="textUri"
+                android:paddingStart="@dimen/px16"
+                android:paddingEnd="@dimen/px16"
+                android:singleLine="true"
+                android:textColor="@color/label_prim" />
+
+            <requestFocus />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px60"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_message">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_cancel_rename"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?selectableItemBackground"
+                android:gravity="center"
+                android:text="@string/btn_cancel"
+                android:textAllCaps="true"
+                android:textColor="@color/label_sec" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/divider" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_confirm_rename"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?selectableItemBackground"
+                android:gravity="center"
+                android:text="@string/btn_ok"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

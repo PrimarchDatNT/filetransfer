@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_dialog"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_select_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px48"
+        android:background="@drawable/bg_bottom_select_send_file_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_select_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/px12"
+                android:adjustViewBounds="true"
+                android:padding="@dimen/px8"
+                android:src="@drawable/ic_transfer_expand" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_send_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/tv_cofirm_send"
+                android:layout_toEndOf="@+id/iv_more"
+                android:paddingStart="@dimen/px8"
+                android:paddingEnd="@dimen/px8"
+                android:textColor="@color/label_prim" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_cofirm_send"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px32"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/px12"
+                android:background="@drawable/selector_button_primary_radius"
+                android:gravity="center"
+                android:minWidth="@dimen/px56"
+                android:onClick="onClickSend"
+                android:paddingStart="@dimen/px20"
+                android:paddingEnd="@dimen/px20"
+                android:text="@string/send"
+                android:textAllCaps="true"
+                android:textColor="@color/fixed_white" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_selected_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sys_quarternary" />
+
+</LinearLayout>
